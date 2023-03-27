@@ -1,38 +1,343 @@
-.App {
-  text-align: center;
+/* General */
+.heading-customized,
+.heading-customized-no-border,
+.heading-banner,
+.heading-services,
+.heading-contacts {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading-customized::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px solid #FFBB00;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.heading-banner::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid #FFBB00;
+}
+
+.color-accent {
+  color: #FFBB00;
+}
+
+/* Navigation component */
+.navbar {
+  background-color: #212121;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar .nav-link {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 12px 0;
+}
+
+.navbar .nav-link-de {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 12px 0;
+}
+
+.navbar {
+  border-bottom: 3px solid #FFBB00;
+  padding-bottom: 0;
+}
+
+.nav-link {
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link-de {
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid #FFBB00;
+}
+
+.navbar-dark .navbar-toggler {
+  border: 0;
+}
+
+.navbar-nav {
+  gap: 1vw;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+/* Footer component */
+footer {
+  background-color: #212121;
+  margin-top: -1px;
+}
+
+.rights-reserved {
+  color: #565656;
+}
+
+.footer-logo {
+  /* background-image: url('../images/egatnom-logo-footer.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-height: 560px;
+  max-width: 70%;
+  filter: opacity(0.1);
+  -webkit-filter: opacity(0.1);
+}
+
+
+@media screen and (max-width: 991px) {
+  .footer-logo {
+    /* background-image: url('../images/egatnom-logo-footer.png'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 100px;
+    filter: opacity(0.1);
+    -webkit-filter: opacity(0.1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header component */
+.bg-image-full {
+  /* background-image: url('images/egatnom-cover-D.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  height: 565px;
+}
+
+.bg-cs-image-full {
+  /* background-image: url('../images/egatnom-cover-D-CZ.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  height: 565px;
+}
+
+.bg-de-image-full {
+  /* background-image: url('../images/egatnom-cover-D-DE.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  height: 565px;
+}
+
+.bg-image-full {
+  /* background-image: url('../images/egatnom-cover-M.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  height: 500px;
+}
+
+.bg-cs-image-full {
+  /* background-image: url('../images/egatnom-cover-M-CZ.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  height: 500px;
+}
+
+.bg-de-image-full {
+  /* background-image: url('../images/egatnom-cover-M-DE.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  height: 500px;
+}
+
+
+
+/* About component */
+.about-wrapper {
+  background-color: #212121;
+}
+
+
+/* Certificates component */
+.shadow-row {
+  box-shadow: inset 0 -11px 25px -15px grey;
+  -webkit-box-shadow: inset 0 -11px 25px -15px grey;
+}
+
+.banner-bg {
+  /* background-image: url('../images/construction-whqat-makes-us-different.svg'); */
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.banner-content {
+  /* background-image: url('../images/banner-egatnom.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  min-height: 560px;
+}
+
+.border-element {
+  /* width: 63%; */
+  min-height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.border-element::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px solid #FFBB00;
+}
+
+.services {
+  /* background-image: url('../images/services-background.svg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: bottom left;
+  background-size: 25%;
+}
+
+.heading-services {
+  font-size: 18px;
+}
+
+.heading-services::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px solid #FFBB00;
+}
+
+.heading-contacts {
+  font-size: 22px;
+}
+
+.heading-contacts::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px solid #FFBB00;
+}
+
+.flag {
+  box-shadow: 0px 0px 2px 1px #00000057;
+  -webkit-box-shadow: 0px 0px 2px 1px #00000057;
+}
+
+.contacts-text-size {
+  font-size: 18px;
+}
+
+.img-container-gallery img {
+  width: 100%;
+  display: block;
+}
+
+.container-gallery {
+  display: block;
+  /* display: grid */
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.parent-slide>.slide:hover {
+  transform: scale(1.1);
+  transition: all 0.2s linear;
+}
+
+
+.slide a {
+  width: 100%;
+  height: 50px;
+}
+
+.slide a img {
+  width: 100%;
+}
+
+.img-container-gallery {
+  position: relative;
+}
+
+.content-gal {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: opacity 1s ease;
+  color: #fff;
+  opacity: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.img-container-gallery:hover .content-gal {
+  opacity: 1;
+  background: tomato;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.zoom-text {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: transform 0.2s linear;
+}
+
+.content-gal h2 {
+  padding: 15px 0;
+}
+
+.zoom-text:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
