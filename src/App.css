@@ -30,7 +30,7 @@
   color: #FFBB00;
 }
 
-/* Navigation component */
+/* Header component */
 .navbar {
   background-color: #212121;
 }
@@ -88,9 +88,6 @@ body {
 footer {
   background-color: #212121;
   margin-top: -1px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 .rights-reserved {
@@ -110,21 +107,51 @@ footer {
   }
 }
 
-/* Header component */
+/* Home component */
+.about-text-hook {
+  font-size: 100px;
+  cursor: pointer;
+  animation: bouncing 2.3s ease-in-out;
+  animation-iteration-count: 5;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translate(0px, 0px) rotateZ(0.001deg);
+    animation-timing-function: ease-in-out
+  }
+
+  75% {
+    transform: translate(0px, 25px) rotateZ(0.001deg);
+    animation-timing-function: ease-in-out
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotateZ(0.001deg);
+    animation-timing-function: ease-in-out
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .about-text-hook {
+    font-size: 9vw;
+  }
+}
+
 .bg-image-full {
   /* background-image: url('../images/egatnom-cover-M.jpg'); */
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top 62%;
   background-size: cover;
-  min-height: 700px;
-  height: 700px;
+  min-height: 900px;
+  height: 900px;
 }
 
 @media screen and (max-width: 991px) {
   .bg-image-full {
-    min-height: 400px;
-    height: 400px;
+    min-height: 85vh;
+    height: 85vh;
     margin-bottom: -2px;
   }
 }
@@ -134,6 +161,22 @@ footer {
 .about-wrapper {
   background-color: #212121;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Certificates component */

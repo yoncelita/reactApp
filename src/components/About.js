@@ -1,4 +1,4 @@
-export default function About() {
+export const About = () => {
 
     return (
         <section className="py-5 about-wrapper" id="About">
@@ -6,8 +6,8 @@ export default function About() {
                 <div className="row justify-content-center">
                     <div className="col-11 col-lg-9">
                         <h1
-                            className="heading-customized display-7 text-left text-lg-center position-relative pb-4 mb-5 text-light">
-                            <span className="fw-bold color-accent">Share your </span> experiences <span className="fw-bold color-accent">and discover <br /></span><span className="fw-bold color-accent">NEW destinations</span>
+                            className="display-7 text-left text-lg-center position-relative pb-4 text-light">
+                            <span className="fw-bold color-accent">Share your </span> adventures <span className="fw-bold color-accent">and discover <br /></span><span className="fw-bold color-accent">new destinations</span>
                         </h1>
                         <p className="mb-0 text-left text-lg-center text-light">
                             <span className="fw-bold color-accent"></span>
