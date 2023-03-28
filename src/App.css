@@ -35,6 +35,10 @@
   background-color: #212121;
 }
 
+.navbar-brand {
+  font-weight: 600;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
@@ -84,21 +88,13 @@ body {
 footer {
   background-color: #212121;
   margin-top: -1px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .rights-reserved {
   color: #565656;
-}
-
-.footer-logo {
-  /* background-image: url('../images/egatnom-logo-footer.png'); */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  min-height: 560px;
-  max-width: 70%;
-  filter: opacity(0.1);
-  -webkit-filter: opacity(0.1);
 }
 
 
@@ -116,65 +112,22 @@ footer {
 
 /* Header component */
 .bg-image-full {
-  /* background-image: url('images/egatnom-cover-D.jpg'); */
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  min-height: 500px;
-  height: 565px;
-}
-
-.bg-cs-image-full {
-  /* background-image: url('../images/egatnom-cover-D-CZ.jpg'); */
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  min-height: 500px;
-  height: 565px;
-}
-
-.bg-de-image-full {
-  /* background-image: url('../images/egatnom-cover-D-DE.jpg'); */
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  min-height: 500px;
-  height: 565px;
-}
-
-.bg-image-full {
   /* background-image: url('../images/egatnom-cover-M.jpg'); */
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center;
+  background-position: center top 62%;
   background-size: cover;
-  min-height: 500px;
-  height: 500px;
+  min-height: 700px;
+  height: 700px;
 }
 
-.bg-cs-image-full {
-  /* background-image: url('../images/egatnom-cover-M-CZ.jpg'); */
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  min-height: 500px;
-  height: 500px;
+@media screen and (max-width: 991px) {
+  .bg-image-full {
+    min-height: 400px;
+    height: 400px;
+    margin-bottom: -2px;
+  }
 }
-
-.bg-de-image-full {
-  /* background-image: url('../images/egatnom-cover-M-DE.jpg'); */
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  min-height: 500px;
-  height: 500px;
-}
-
 
 
 /* About component */

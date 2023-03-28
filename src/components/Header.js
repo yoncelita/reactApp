@@ -1,14 +1,15 @@
+import { Route } from "react-router-dom";
 import About from "./About";
 export default function Header() {
 
-    const desktopImage = 'images/egatnom-cover-D.jpg';
-    const mobileImage = 'images/egatnom-cover-M.jpg';
+    const desktopImage = 'images/banner-D.jpg';
+    const mobileImage = 'images/banner-D.jpg'; //new
     const imageUrl = window.innerWidth >= 650 ? desktopImage : mobileImage;
 
     return (
         <>
-            <header class="py-5 bg-image-full" style={{ backgroundImage: `url(${imageUrl})` }}></header>
-            <About />
-        </>
-    )
+            <header className="py-5 bg-image-full" style={{ backgroundImage: `linear-gradient(to bottom, rgb(243 243 243 / 0%), rgb(33 33 33)), url(${imageUrl})` }}></header>
+                <About />
+            </>
+            )
 }
