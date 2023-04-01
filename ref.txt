@@ -1,0 +1,6 @@
+"destination": "Maldives",
+"date": "05.03.2019",
+"transport": "plane",
+"cost": "5000$",
+"image": "https://assets.anantara.com/image/upload/q_auto,f_auto/media/minor/anantara/images/anantara-veli-maldives-resort/renderings-2022/home-page/anantara_veli_aerial_shot_960x519px.jpg",
+"description": "Wonderfull place to visit! I've made special vacantion in Maldives with my husband!"

@@ -1,8 +1,8 @@
 import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
 
-export const CreatePost = ({
-    onCreatePostSubmit,
+export const Edit = ({
+    onEditPostSubmit,
 }) => {
 
     const [values, setValues] = useState({
@@ -20,7 +20,7 @@ export const CreatePost = ({
 
     const onSubmit = (e) => {
         e.preventDefault();
-        onCreatePostSubmit(values);
+        onEditPostSubmit(values);
     };
 
     return (
@@ -56,7 +56,7 @@ export const CreatePost = ({
                     <Form.Control value={values.description} onChange={onChangeHandler} type="text" as="textarea" name="description" rows={10} placeholder="Share your experience for others to read here..." />
                 </Form.Group>
 
-                <Button type="submit" value="Submit" className="custom-btn">Create a Post</Button>
+                <Button type="submit" value="Submit" className="custom-btn">Save Post</Button>
             </Form>
         </section>
     )
