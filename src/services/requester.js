@@ -1,4 +1,4 @@
-const request = async (method, url, data) => {
+const request = async (method, url, data, token) => {
 
     const options = {};
     if (method !== 'GET') {
@@ -11,6 +11,15 @@ const request = async (method, url, data) => {
             options.body = JSON.stringify(data);
         }
     }
+
+
+    if (token) {
+        options.headers = {
+            ...options.headers,
+            'X-Authorization': token,
+        };
+    }
+
 
     const response = await fetch(url, options);
 

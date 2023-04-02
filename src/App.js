@@ -16,6 +16,7 @@ import { CreatePost } from './components/CreatePost';
 import { Login } from './components/Login';
 import { Register } from './components/Register';
 import { Logout } from './components/Logout';
+import { Edit } from './components/Edit';
 
 
 function App() {
@@ -30,8 +31,10 @@ function App() {
             })
     }, []);
 
+
+    //Create
     const onCreatePostSubmit = async (data) => {
-        const newPost = await postService.create(data);
+        const newPost = await postService.create(data, auth.accessToken);
 
 
         //add New Posts to the state => update State
@@ -86,6 +89,7 @@ function App() {
         // await authService.logout();
         setAuth({});
     }
+
 
 
     const contextValues = {

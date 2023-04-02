@@ -1,5 +1,6 @@
 import { About } from './About';
 
+
 export const Home = () => {
 
     const desktopImage = 'images/banner-D.webp';

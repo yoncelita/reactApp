@@ -1,5 +1,4 @@
 import { Card } from 'react-bootstrap';
-// import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export const CatalogItem = ({
@@ -14,9 +13,8 @@ export const CatalogItem = ({
             <Card.Body>
                 <Card.Text className='text-muted m-0'>Destination: <h3 className='text-black'>{destination}</h3></Card.Text>
                 <Card.Text className='text-muted'>
-                    Date: <h7 className='text-black fw-bold'>{date}</h7>
+                    Date: <span className='text-black fw-bold'>{date}</span>
                 </Card.Text>
-                {/* <Button className="custom-btn">Explore</Button> */}
                 <Link to={`/catalog/${_id}`} className="custom-btn btn">Explore</Link>
             </Card.Body>
         </Card>
