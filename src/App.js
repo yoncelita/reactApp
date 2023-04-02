@@ -2,6 +2,7 @@ import './App.css';
 import './Styles.css';
 
 import * as postService from './services/postService';
+import * as authService from './services/authService';
 import { AuthContext } from './contexts/AuthContext';
 
 import { useState, useEffect } from 'react';
@@ -14,6 +15,7 @@ import { PostDetails } from './components/PostDetails';
 import { CreatePost } from './components/CreatePost';
 import { Login } from './components/Login';
 import { Register } from './components/Register';
+import { Logout } from './components/Logout';
 
 
 function App() {
@@ -24,7 +26,6 @@ function App() {
     useEffect(() => {
         postService.getAll()
             .then(result => {
-                console.log(result);
                 setPosts(result)
             })
     }, []);
@@ -41,12 +42,64 @@ function App() {
     };
 
 
+
+    //Login
     const onLoginSubmit = async (data) => {
         console.log(data);
+        try {
+            const result = await authService.login(data);
+
+            setAuth(result);
+
+            navigate('/catalog');
+        } catch (error) {
+            console.log('There is a problem with login');
+        }
     };
 
+
+    //Register
+    const onRegisterSubmit = async (values) => {
+        const { repeatPassword, ...registerData } = values;
+        if (repeatPassword !== registerData.password) {
+            throw new Error('Passwords are different!')
+            // return;
+        }
+
+        try {
+            const result = await authService.register(registerData);
+
+            setAuth(result)
+
+            navigate('/catalog');
+        } catch (error) {
+            console.log('There is a problem with register');
+        }
+    }
+
+
+
+    //Logout
+    const onLogout = async () => {
+
+        //TODO: Authorized request
+        // await authService.logout();
+        setAuth({});
+    }
+
+
+    const contextValues = {
+        onLoginSubmit,
+        onRegisterSubmit,
+        onLogout,
+        userId: auth._id,
+        token: auth.accessToken,
+        userEmail: auth.email,
+        isAuthenticated: !!auth.accessToken,
+    }
+
     return (
-        <AuthContext.Provider value={{ onLoginSubmit }}>
+        <AuthContext.Provider value={contextValues}>
             <div id="app">
                 <Header />
                 <main className="main-content">
@@ -58,6 +111,7 @@ function App() {
                         <Route path="/catalog/:postId" element={<PostDetails />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
+                        <Route path="/logout" element={<Logout />} />
                     </Routes>
                 </main>
                 <Footer />

@@ -270,3 +270,9 @@ footer {
 .link-to-reg {
   color: var(--hover-color);
 }
+
+.wellcome-user {
+  color: var(--second-color);
+  padding: 12px 0;
+  font-size: 13px;
+}

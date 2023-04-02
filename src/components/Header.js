@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 export const Header = () => {
+
+    const { isAuthenticated, userEmail } = useContext(AuthContext);
+
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark sticky-top p-0">
             <div className="container">
@@ -11,18 +17,38 @@ export const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul
                         className="navbar-nav ms-auto mb-lg-0 flex-row flex-wrap justify-content-lg-center justify-content-between">
+
                         <li className="nav-item">
                             <Link className="nav-link" to="/catalog">Catalog</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/create-post">Create post</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/login">Login</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/register">Register</Link>
-                        </li>
+
+                        {/* ---------Logged in users only------ */}
+                        {isAuthenticated && (
+                            <>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/create-post">Create post</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/logout">Logout</Link>
+                                </li>
+                                <span className="wellcome-user">Hi, {userEmail}</span>
+                            </>
+
+                        )}
+
+                        {/* ---------Guests users only------ */}
+                        {!isAuthenticated && (
+                            <>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/login">Login</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/register">Register</Link>
+                                </li>
+                            </>
+
+                        )}
+
                     </ul>
                 </div>
             </div>
