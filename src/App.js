@@ -91,6 +91,16 @@ function App() {
     }
 
 
+    // Edit
+    const onPostEditSubmit = async (values) => {
+        const result = await postService.edit(values._id, values, auth.accessToken);
+
+        //change state!
+        setPosts(state => state.map(x => x._id === values._id ? result : x));
+
+        navigate(`/catalog/${values._id}`)
+    };
+
 
     const contextValues = {
         onLoginSubmit,
@@ -113,6 +123,7 @@ function App() {
                         <Route path="/create-post" element={<CreatePost onCreatePostSubmit={onCreatePostSubmit} />} />
                         <Route path="/catalog" element={<Catalog posts={posts} />} />
                         <Route path="/catalog/:postId" element={<PostDetails />} />
+                        <Route path="/catalog/:postId/edit" element={<Edit onPostEditSubmit={onPostEditSubmit} />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
                         <Route path="/logout" element={<Logout />} />

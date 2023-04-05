@@ -9,9 +9,9 @@ export const CatalogItem = ({
 }) => {
     return (
         <Card className='card-item-post p-0'>
-            <Card.Img variant="top" src={image} alt='img'/>
+            <Card.Img variant="top" src={image} alt='img' />
             <Card.Body>
-                <Card.Text className='text-muted m-0'>Destination: <h3 className='text-black'>{destination}</h3></Card.Text>
+                <Card.Text className='text-muted mb-2 card-text d-inline-flex flex-row flex-lg-column align-items-center align-items-lg-start gap-2 gap-lg-0 card-text card-text'>Destination: <span className='text-black display-6 fw-normal'>{destination}</span></Card.Text>
                 <Card.Text className='text-muted'>
                     Date: <span className='text-black fw-bold'>{date}</span>
                 </Card.Text>

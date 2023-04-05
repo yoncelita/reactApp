@@ -3,8 +3,8 @@ import { About } from './About';
 
 export const Home = () => {
 
-    const desktopImage = 'images/banner-D.webp';
-    const mobileImage = 'images/banner-D.webp'; //new
+    const desktopImage = 'images/homeBanner.webp';
+    const mobileImage = 'images/homeBanner.webp'; //new
     const imageUrl = window.innerWidth >= 650 ? desktopImage : mobileImage;
 
     return (

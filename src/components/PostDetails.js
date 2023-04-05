@@ -51,8 +51,8 @@ export const PostDetails = () => {
                             {/* If you are owner */}
                             {isOwner && (
                                 <div className='edin-del-btns'>
-                                    <Link to={`/edit/${postId}`} className="custom-btn btn me-2">Edit</Link>
-                                    <Link to={`/delete/${postId}`} className="custom-btn btn">Delete</Link>
+                                    <Link to={`/catalog/${post._id}/edit`} className="custom-btn btn me-2">Edit</Link>
+                                    <Link to={`/catalog/${post._id}/delete`} className="custom-btn btn">Delete</Link>
                                 </div>
                             )}
 

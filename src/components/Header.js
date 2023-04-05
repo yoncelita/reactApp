@@ -5,6 +5,7 @@ import { AuthContext } from "../contexts/AuthContext";
 export const Header = () => {
 
     const { isAuthenticated, userEmail } = useContext(AuthContext);
+    console.log(userEmail);
 
 
     return (
@@ -16,7 +17,7 @@ export const Header = () => {
                     aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul
-                        className="navbar-nav ms-auto mb-lg-0 flex-row flex-wrap justify-content-lg-center justify-content-between">
+                        className="navbar-nav ms-auto mb-lg-0 flex-row flex-wrap justify-content-lg-center justify-content-evenly">
 
                         <li className="nav-item">
                             <Link className="nav-link" to="/catalog">Catalog</Link>
@@ -31,7 +32,7 @@ export const Header = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/logout">Logout</Link>
                                 </li>
-                                <span className="wellcome-user">Hi, {userEmail}</span>
+                                <span className="wellcome-user">Hi, {userEmail.substring(0, userEmail.lastIndexOf("@"))}</span>
                             </>
 
                         )}

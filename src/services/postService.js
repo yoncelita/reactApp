@@ -28,3 +28,11 @@ export const getOne = async (postId) => {
 
     return result;
 };
+
+// Edit Post service
+export const edit = async (postId, data, accessToken) => {
+    const result = await request.put(`${baseUrl}/${postId}`, data, accessToken);
+
+    return result;
+};
+
