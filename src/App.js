@@ -17,6 +17,7 @@ import { Login } from './components/Login';
 import { Register } from './components/Register';
 import { Logout } from './components/Logout';
 import { Edit } from './components/Edit';
+import { post } from './services/requester';
 
 
 function App() {
@@ -100,7 +101,6 @@ function App() {
 
         navigate(`/catalog/${values._id}`)
     };
-
 
     const contextValues = {
         onLoginSubmit,

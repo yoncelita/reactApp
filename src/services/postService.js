@@ -36,3 +36,6 @@ export const edit = async (postId, data, accessToken) => {
     return result;
 };
 
+
+// Delete service
+export const removePost = async (postId, token) => await request.del(`${baseUrl}/${postId}`, token);

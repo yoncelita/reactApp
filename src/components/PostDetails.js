@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import * as postService from '../services/postService';
 import { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
@@ -8,7 +8,7 @@ import { AuthContext } from '../contexts/AuthContext';
 export const PostDetails = () => {
     const { postId } = useParams();
     const [post, setPost] = useState({});
-    const { userId } = useContext(AuthContext);
+    const { userId, token } = useContext(AuthContext);
 
     useEffect(() => {
         postService.getOne(postId)
@@ -17,8 +17,15 @@ export const PostDetails = () => {
             });
     }, [postId]);
 
+
     {/* If you are owner */ }
     const isOwner = post._ownerId === userId;
+
+    // Delete
+    const onDeleteClick = async () => {
+        const result = await postService.removePost(postId, token);
+        return result;
+    };
 
     return (
         <section id="details-page">
@@ -52,7 +59,7 @@ export const PostDetails = () => {
                             {isOwner && (
                                 <div className='edin-del-btns'>
                                     <Link to={`/catalog/${post._id}/edit`} className="custom-btn btn me-2">Edit</Link>
-                                    <Link to={`/catalog/${post._id}/delete`} className="custom-btn btn">Delete</Link>
+                                    <button className="custom-btn btn" onClick={onDeleteClick}>Delete</button>
                                 </div>
                             )}
 
