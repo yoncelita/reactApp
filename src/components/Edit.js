@@ -17,6 +17,8 @@ export const Edit = ({
         transport: '',
         cost: '',
         image: '',
+        image2: '',
+        image3: '',
         description: '',
     }, onPostEditSubmit);
 
@@ -54,6 +56,8 @@ export const Edit = ({
                 <Form.Group className="mb-3" controlId="formBasicImage">
                     <Form.Label className="fw-bold">Link your Photo</Form.Label>
                     <Form.Control value={values.image} onChange={changeHandler} type="text" name="image" placeholder="Enter photo url" />
+                    <Form.Control value={values.image2} onChange={changeHandler} type="text" name="image" placeholder="Enter photo url" />
+                    <Form.Control value={values.image3} onChange={changeHandler} type="text" name="image" placeholder="Enter photo url" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextareaDescription">

@@ -6,6 +6,8 @@ export const CatalogItem = ({
     destination,
     date,
     image,
+    image2,
+    image3,
 }) => {
     return (
         <Card className='card-item-post p-0'>

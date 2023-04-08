@@ -38,4 +38,6 @@ export const edit = async (postId, data, accessToken) => {
 
 
 // Delete service
-export const removePost = async (postId, token) => await request.del(`${baseUrl}/${postId}`, token);
+export const deletePost = async (postId, accessToken) => await request.del(`${baseUrl}/${postId}`, null, accessToken);
+
+

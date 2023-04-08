@@ -9,7 +9,7 @@ const request = async (method, url, data, token) => {
                 'content-type': 'application/json',
             };
             options.body = JSON.stringify(data);
-        } 
+        }
     }
 
 
@@ -19,7 +19,6 @@ const request = async (method, url, data, token) => {
             'X-Authorization': token,
         };
     }
-
 
     const response = await fetch(url, options);
 

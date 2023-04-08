@@ -11,6 +11,8 @@ export const CreatePost = ({
         transport: '',
         cost: '',
         image: '',
+        image2: '',
+        image3: '',
         description: '',
     }, onCreatePostSubmit);
 
@@ -38,12 +40,14 @@ export const CreatePost = ({
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicImage">
-                    <Form.Label className="fw-bold">Link your Photo</Form.Label>
-                    <Form.Control value={values.image} onChange={changeHandler} type="text" name="image" placeholder="Enter photo url" />
+                    <Form.Label className="fw-bold">Link your best photos</Form.Label>
+                    <Form.Control value={values.image} onChange={changeHandler} type="text" name="image" placeholder="Enter first photo url" />
+                    <Form.Control value={values.image2} onChange={changeHandler} type="text" name="image2" placeholder="Enter second photo url" className="my-2" />
+                    <Form.Control value={values.image3} onChange={changeHandler} type="text" name="image3" placeholder="Enter third photo url" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextareaDescription">
-                    <Form.Label className="fw-bold">Share your experience</Form.Label>
+                    <Form.Label className="fw-bold">Share your experience here</Form.Label>
                     <Form.Control value={values.description} onChange={changeHandler} type="text" as="textarea" name="description" rows={10} placeholder="Share your experience for others to read here..." />
                 </Form.Group>
 

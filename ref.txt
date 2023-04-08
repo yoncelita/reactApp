@@ -1,6 +1,14 @@
-"destination": "Maldives",
-"date": "05.03.2019",
-"transport": "plane",
-"cost": "5000$",
-"image": "https://assets.anantara.com/image/upload/q_auto,f_auto/media/minor/anantara/images/anantara-veli-maldives-resort/renderings-2022/home-page/anantara_veli_aerial_shot_960x519px.jpg",
-"description": "Wonderfull place to visit! I've made special vacantion in Maldives with my husband!"
+ posts: {
+            "ff436770-76c5-40e2-b231-77409eda7a61": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "destination": "Maldives",
+                "date": "05.03.2019",
+                "transport": "plane",
+                "cost": "5000$",
+                "image": "https://assets.anantara.com/image/upload/q_auto,f_auto/media/minor/anantara/images/anantara-veli-maldives-resort/renderings-2022/home-page/anantara_veli_aerial_shot_960x519px.jpg",
+                "image2": "https://lp-cms-production.imgix.net/2020-09/The%20Nautilus%20Maldives_July19-9335.jpg",
+                "image3": "https://images.prestigeonline.com/wp-content/uploads/sites/8/2022/08/25183230/295732509_374958474753028_1144791313409259620_n-1350x900.jpeg",
+                "description": "I recently went on an unforgettable trip to Maldives, and I'd love to share my adventure with you! The first day, my travel companions and I were awestruck by the beauty of the island as we arrived at our resort via a seaplane. We spent the day relaxing on the beach, swimming in the crystal-clear waters, and snorkeling with vibrant fish and sea turtles. On the second day, we explored the local culture and history by visiting the capital city of Malé, where we saw the historic Hukuru Miskiy mosque and the lively fish market. That evening, we indulged in a delicious seafood feast and watched the sunset from a private dinner on the beach. The third day was all about adventure. We went on a dolphin watching excursion and even saw some playful dolphins swimming alongside our boat! After that, we tried our hand at windsurfing and paddleboarding, which was a lot of fun. On the fourth day, we went on a half-day fishing trip, where we caught some fresh tuna and had it cooked up for us by the resort's chefs. Later, we enjoyed a romantic sunset cruise and stargazing experience, complete with champagne and canapés. Our fifth day in Maldives was all about relaxation and pampering. We indulged in some spa treatments and enjoyed the resort's luxurious amenities, including a private pool and a gourmet dinner with a stunning ocean view. Finally, on our last day, we said goodbye to this magical paradise with a heavy heart. We spent the morning on the beach, soaking up the sun and reflecting on our unforgettable journey. It was truly a once-in-a-lifetime experience, and I can't wait to go back someday!",
+                "_createdOn": 1617194128618,
+            }
+        },

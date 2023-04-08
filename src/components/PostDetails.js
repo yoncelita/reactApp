@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import * as postService from '../services/postService';
 import { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
@@ -8,7 +8,8 @@ import { AuthContext } from '../contexts/AuthContext';
 export const PostDetails = () => {
     const { postId } = useParams();
     const [post, setPost] = useState({});
-    const { userId, token } = useContext(AuthContext);
+    const { userId, onPostDelete } = useContext(AuthContext);
+
 
     useEffect(() => {
         postService.getOne(postId)
@@ -18,14 +19,14 @@ export const PostDetails = () => {
     }, [postId]);
 
 
-    {/* If you are owner */ }
-    const isOwner = post._ownerId === userId;
-
-    // Delete
-    const onDeleteClick = async () => {
-        const result = await postService.removePost(postId, token);
-        return result;
+    //Delete handler
+    const handleDeleteClick = async () => {
+        await onPostDelete(postId);
     };
+
+
+    //If you are owner
+    const isOwner = post._ownerId === userId;
 
     return (
         <section id="details-page">
@@ -50,7 +51,11 @@ export const PostDetails = () => {
                             <Card.Text className='text-muted'>
                                 Total expensies: <span className='text-black fw-bold'>{post.cost}</span>
                             </Card.Text>
-                            <Card.Img variant="top" src={post.image} className='mt-3' alt='img' />
+                            <div className='container-img-details d-flex gap-1 m-0 p-0 justify-content-center'>
+                                <Card.Img variant="top" src={post.image} className='card-img-detail card-img-top' alt='img' />
+                                <Card.Img variant="top" src={post.image2} className='card-img-detail card-img-top' alt='img' />
+                                <Card.Img variant="top" src={post.image3} className='card-img-detail card-img-top' alt='img' />
+                            </div>
                             <Card.Text className='fs-6 my-5'>
                                 {post.description}
                             </Card.Text>
@@ -59,7 +64,7 @@ export const PostDetails = () => {
                             {isOwner && (
                                 <div className='edin-del-btns'>
                                     <Link to={`/catalog/${post._id}/edit`} className="custom-btn btn me-2">Edit</Link>
-                                    <button className="custom-btn btn" onClick={onDeleteClick}>Delete</button>
+                                    <button className="custom-btn btn" onClick={handleDeleteClick}>Delete</button>
                                 </div>
                             )}
 

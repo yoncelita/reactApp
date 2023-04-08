@@ -17,7 +17,6 @@ import { Login } from './components/Login';
 import { Register } from './components/Register';
 import { Logout } from './components/Logout';
 import { Edit } from './components/Edit';
-import { post } from './services/requester';
 
 
 function App() {
@@ -87,7 +86,7 @@ function App() {
     const onLogout = async () => {
 
         //TODO: Authorized request
-        // await authService.logout();
+        await authService.logout();
         setAuth({});
     }
 
@@ -102,6 +101,19 @@ function App() {
         navigate(`/catalog/${values._id}`)
     };
 
+
+
+    // Delete
+    const onPostDelete = async (postId) => {
+        await postService.deletePost(postId, auth.accessToken);
+
+        // remove the deleted post from the state array
+        setPosts((state) => state.filter((post) => post._id !== postId));
+
+        navigate('/catalog');
+    };
+
+
     const contextValues = {
         onLoginSubmit,
         onRegisterSubmit,
@@ -110,6 +122,7 @@ function App() {
         token: auth.accessToken,
         userEmail: auth.email,
         isAuthenticated: !!auth.accessToken,
+        onPostDelete,
     }
 
     return (
