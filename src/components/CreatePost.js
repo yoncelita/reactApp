@@ -21,34 +21,34 @@ export const CreatePost = ({
             <Form method="POST" onSubmit={onSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicDestination">
                     <Form.Label className="fw-bold">My destination</Form.Label>
-                    <Form.Control value={values.destination} onChange={changeHandler} type="text" name="destination" placeholder="Enter your destination" />
+                    <Form.Control value={values.destination} required={true} onChange={changeHandler} type="text" name="destination" placeholder="Enter your destination" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicDate">
                     <Form.Label className="fw-bold">Date arrived</Form.Label>
-                    <Form.Control value={values.date} onChange={changeHandler} type="date" name="date" placeholder="Enter your start date" />
+                    <Form.Control value={values.date} required={true} onChange={changeHandler} type="date" name="date" placeholder="Enter your start date" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicTransport">
                     <Form.Label className="fw-bold">My transport</Form.Label>
-                    <Form.Control value={values.transport} onChange={changeHandler} type="text" name="transport" placeholder="Enter your transport" />
+                    <Form.Control value={values.transport} required={true} onChange={changeHandler} type="text" name="transport" placeholder="Enter your transport" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicCost">
                     <Form.Label className="fw-bold">How much was the total cost?</Form.Label>
-                    <Form.Control value={values.cost} onChange={changeHandler} type="text" name="cost" placeholder="Enter all the expenses" />
+                    <Form.Control value={values.cost} required={true} onChange={changeHandler} type="text" name="cost" placeholder="Enter all the expenses" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicImage">
                     <Form.Label className="fw-bold">Link your best photos</Form.Label>
-                    <Form.Control value={values.image} onChange={changeHandler} type="text" name="image" placeholder="Enter first photo url" />
-                    <Form.Control value={values.image2} onChange={changeHandler} type="text" name="image2" placeholder="Enter second photo url" className="my-2" />
-                    <Form.Control value={values.image3} onChange={changeHandler} type="text" name="image3" placeholder="Enter third photo url" />
+                    <Form.Control value={values.image} required={true} onChange={changeHandler} type="text" name="image" placeholder="Enter first photo url" />
+                    <Form.Control value={values.image2} required={true} onChange={changeHandler} type="text" name="image2" placeholder="Enter second photo url" className="my-2" />
+                    <Form.Control value={values.image3} required={true} onChange={changeHandler} type="text" name="image3" placeholder="Enter third photo url" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextareaDescription">
                     <Form.Label className="fw-bold">Share your experience here</Form.Label>
-                    <Form.Control value={values.description} onChange={changeHandler} type="text" as="textarea" name="description" rows={10} placeholder="Share your experience for others to read here..." />
+                    <Form.Control value={values.description} required={true} onChange={changeHandler} type="text" as="textarea" name="description" rows={10} placeholder="Share your experience for others to read here..." />
                 </Form.Group>
 
                 <Button type="submit" value="Submit" className="custom-btn">Create a Post</Button>

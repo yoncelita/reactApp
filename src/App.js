@@ -47,15 +47,21 @@ function App() {
 
     //Login
     const onLoginSubmit = async (data) => {
-        console.log(data);
+
+        if (!data.email || !data.password) {
+            window.alert("Please enter both email and password.");
+            throw new Error("Please enter both email and password.");
+        }
         try {
             const result = await authService.login(data);
 
+            console.log(data);
             setAuth(result);
 
             navigate('/catalog');
         } catch (error) {
-            console.log('There is a problem with login');
+            window.alert("Incorrect email or password");
+            throw new Error("Incorrect email or password");
         }
     };
 
@@ -64,8 +70,14 @@ function App() {
     const onRegisterSubmit = async (values) => {
         const { repeatPassword, ...registerData } = values;
         if (repeatPassword !== registerData.password) {
+            window.alert('Passwords are different!')
             throw new Error('Passwords are different!')
             // return;
+        }
+
+        if (!registerData.email || !registerData.password) {
+            window.alert('Please enter both email and password.');
+            throw new Error('Please enter both email and password.')
         }
 
         try {
@@ -75,7 +87,8 @@ function App() {
 
             navigate('/catalog');
         } catch (error) {
-            console.log('There is a problem with register');
+            window.alert(Object.entries(error).pop().slice(-1));
+            throw new Error(error);
         }
     }
 

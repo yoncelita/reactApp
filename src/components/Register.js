@@ -14,7 +14,6 @@ export const Register = () => {
         repeatPassword: '',
     }, onRegisterSubmit);
 
-
     return (
         <section id="register-page" className="form-page">
             <Form method="POST" onSubmit={onSubmit}>

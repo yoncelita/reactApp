@@ -54,10 +54,10 @@ export const Edit = ({
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicImage">
-                    <Form.Label className="fw-bold">Link your Photo</Form.Label>
-                    <Form.Control value={values.image} onChange={changeHandler} type="text" name="image" placeholder="Enter photo url" />
-                    <Form.Control value={values.image2} onChange={changeHandler} type="text" name="image" placeholder="Enter photo url" />
-                    <Form.Control value={values.image3} onChange={changeHandler} type="text" name="image" placeholder="Enter photo url" />
+                    <Form.Label className="fw-bold">Link your best photos</Form.Label>
+                    <Form.Control value={values.image} onChange={changeHandler} type="text" name="image" placeholder="Enter first photo url" />
+                    <Form.Control value={values.image2} onChange={changeHandler} type="text" name="image2" placeholder="Enter second photo url" className="my-2" />
+                    <Form.Control value={values.image3} onChange={changeHandler} type="text" name="image3" placeholder="Enter third photo url" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextareaDescription">
