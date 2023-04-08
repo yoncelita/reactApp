@@ -40,7 +40,6 @@ function App() {
         //add New Posts to the state => update State
         setPosts(state => [...state, newPost]);
 
-        //redirect to catalog page using useNavigate hook
         navigate('/catalog');
     };
 
@@ -85,8 +84,7 @@ function App() {
     //Logout
     const onLogout = async () => {
 
-        //TODO: Authorized request
-        await authService.logout();
+        await authService.logout(auth.accessToken);
         setAuth({});
     }
 
@@ -95,7 +93,7 @@ function App() {
     const onPostEditSubmit = async (values) => {
         const result = await postService.edit(values._id, values, auth.accessToken);
 
-        //change state!
+        //changing state
         setPosts(state => state.map(x => x._id === values._id ? result : x));
 
         navigate(`/catalog/${values._id}`)
@@ -130,7 +128,6 @@ function App() {
             <div id="app">
                 <Header />
                 <main className="main-content">
-                    {/* Routes is When the url manually matches the path --> show this component */}
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/create-post" element={<CreatePost onCreatePostSubmit={onCreatePostSubmit} />} />

@@ -37,7 +37,6 @@ export const PostDetails = () => {
             </div>
             <div className='conatiner'>
                 <div className='row justify-content-center gap-3 py-5 flex-column flex-lg-row m-0'>
-
                     <Card className='card-item-post-details p-0'>
 
                         <Card.Body>
@@ -51,10 +50,11 @@ export const PostDetails = () => {
                             <Card.Text className='text-muted'>
                                 Total expensies: <span className='text-black fw-bold'>{post.cost}</span>
                             </Card.Text>
-                            <div className='container-img-details d-flex gap-1 m-0 p-0 justify-content-center'>
+                            <div className='container-img-details d-flex gap-1 m-0 p-0 justify-content-start'>
                                 <Card.Img variant="top" src={post.image} className='card-img-detail card-img-top' alt='img' />
-                                <Card.Img variant="top" src={post.image2} className='card-img-detail card-img-top' alt='img' />
-                                <Card.Img variant="top" src={post.image3} className='card-img-detail card-img-top' alt='img' />
+                                <Card.Img variant="top" src={post.image2} className='card-img-detail card-img-top img2' alt='img' />
+                                <Card.Img variant="top" src={post.image3} className='card-img-detail card-img-top img3' alt='img' />
+
                             </div>
                             <Card.Text className='fs-6 my-5'>
                                 {post.description}

@@ -1,7 +1,7 @@
 :root {
   --main-color: #212121;
   --hover-color: #727272;
-  --second-color: #FFBB00;
+  --second-color: #ffcb3e;
 }
 
 
@@ -150,6 +150,7 @@ footer {
   cursor: pointer;
   animation: bouncing 2.3s ease-in-out;
   animation-iteration-count: 5;
+  text-shadow: -4px 12px 11px rgb(0 0 0 / 25%);
 }
 
 @keyframes bouncing {
@@ -235,6 +236,7 @@ footer {
   .card-item-post img {
     min-height: 350px;
     height: 100%;
+    object-fit: fill;
   }
 }
 
@@ -256,8 +258,8 @@ footer {
 }
 
 .card-img-detail {
-  width: 33.3%!important;
-  border-radius: 0px!important;
+  width: 33.3% !important;
+  border-radius: 0px !important;
 }
 
 .card-img-blur {

@@ -6,4 +6,4 @@ export const login = (data) => request.post(`${baseUrl}/login`, data);
 
 export const register = (registerData) => request.post(`${baseUrl}/register`, registerData);
 
-export const logout = () => request.get(`${baseUrl}/logout`);
+export const logout = (accessToken) => request.get(`${baseUrl}/logout`, null, accessToken);

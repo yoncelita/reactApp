@@ -5,7 +5,7 @@ export const Footer = () => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
-                        <p className="py-lg-0 my-0 text-center rights-reserved">2023 #Follow-me ©. All rights reserved.</p>
+                        <p className="py-lg-0 my-0 text-center rights-reserved">#Follow-me 2023. All rights reserved.</p>
                     </div>
                 </div>
             </div>
