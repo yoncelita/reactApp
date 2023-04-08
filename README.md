@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# #FOLLOW ME 🗺️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a sample React app that uses SoftUni practice server to demonstrate basic CRUD operations. The practice server store and retrieve data, and has features for user authentication and authorization. The app allows users to register and login, view a list of posts, create new posts, edit and delete existing posts.
+<br>
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started, clone this repository to your local machine and run npm install to install the dependencies. You will also need to have Node.js and npm installed on your machine.
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Running the App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To run the app, run npm start in the terminal. <br>This will start the app on http://localhost:3000.
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## User Authentication
 
-### `npm run build`
+To register for an account, navigate to the /register route and enter your information. Once you have registered, you can log in to the app by navigating to the /login route.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once logged in, you will be able to create, edit, and delete blog posts. You will also be able to see a list of all blog posts on the /catalog route, and view individual posts by clicking on them.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Services
+This app uses the following services:
 
-### `npm run eject`
+- postService: A service that handles CRUD operations for blog posts.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- authService: A service that handles user authentication and authorization.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Functionality
+The app has the following functionality:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Users can register and login
+- Users can view a list of posts
+- Users can create new posts
+- Users can edit existing posts
+- Users can delete existing posts
+- Technologies Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Dependencies
+This app has the following dependencies:
 
-## Learn More
+- react: The core React library.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- react-dom: A package that provides DOM-specific methods for React.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- react-router-dom: A package that provides routing functionality for React.
 
-### Code Splitting
+- bootstrap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- react-bootstrap
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgements
+***This app was built as part of the SoftUni JavaScript Web course. The practice server was provided by the course instructors.
